@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch", 
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
+            "args": [], 
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true, 
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\software\\latex\\mingw64\\bin\\gdb.exe",
+ 
+    //**********上面这行，要修改为你的编译器所在的路径，形如 c:\\***\\bin\\gdb.exe
+ 
+            "preLaunchTask": "gc", //这里注意一下这个名字一会儿还要用到
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ]
+        }
+    ]
+}
